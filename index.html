@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Gasto Semanal</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="text-center">Gasto Semanal</h1>
+      </header>
+      <section class="contenido-principal">
+        <div class="row">
+          <div class="col ">
+            <div class="contenido primario">
+              <h2 class="text-center"><strong>Añade tus gastos aqui</strong></h2>
+
+              <form id="agregar-gasto" action="#">
+                <div class="form-group" id="presu-container">
+                  <label for="gasto">Presupuesto:</label>
+                  <input type="text" class="form-control" id="presu" placeholder="Presupuesto" autocomplete="none">
+                  <button id="btnPresu" class="btn btn-primary">Agregar Presupuesto Inicial</button>
+                </div>
+
+                <div class="form-group">
+                  <label for="gasto">Nombre Gasto:</label>
+                  <input type="text" class="form-control" id="gasto" placeholder="Nombre Gasto" autocomplete="none"
+                    disabled>
+                </div>
+                <div class="form-group">
+                  <label for="cantidad">Precio:</label>
+                  <input type="text" class="form-control" id="cantidad" placeholder="Cantidad en S/" autocomplete="none"
+                    disabled>
+                </div>
+                <button id="submit" type="submit" class="btn btn-primary" disabled>Agregar</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="contenido secundario">
+              <h2 class="text-center"><strong>Listado</strong></h2>
+              <div id="gastos">
+                <table>
+                  <thead id="tituloGastos"></thead>
+                  <tbody id="list-group"></tbody>
+                </table>
+              </div>
+              <div class="presupuesto">
+
+                <div id="addPresupuesto" class="alert alert-success">
+                  <p>Total: S/ <span id="total"></span></p>
+                </div>
+
+                <div class="alert alert-primary">
+                  <p>Presupuesto: S/ <span id="presupuesto"></span> </p>
+                </div>
+                <div class="alert alert-success">
+                  <p>Restante: S/ <span id="restante"></span></p>
+                </div>
+                <button id="reset" class="btn btn-primary">Borrar todo</button>
+              </div>
+            </div>
+          </div>
+      </section>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+
+</html>
